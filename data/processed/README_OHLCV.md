@@ -75,3 +75,26 @@ python scripts/export_kse100_ohlcv_json.py --years 10 --end 2026-10-08
 python scripts/detect_kse100_corporate_actions.py
 python scripts/validate_kse100_ohlcv_json.py     # exit 0 = all checks green
 ```
+
+---
+
+## Excel workbook — `KSE100_10Y_OHLCV.xlsx` (11.5 MB, 105 sheets)
+
+Everything in one workbook, built by `scripts/build_kse100_workbook.py`:
+
+| Sheet | Rows | Contents |
+|---|---|---|
+| `README` | — | Contents, key facts, how to read the quality flags, caveats |
+| `Summary` | — | Index start/end, 10y total return, CAGR, max drawdown, coverage, top-5 returns |
+| `Index History` | 2,495 | KSE-100 daily OHLC + chg% + cumulative return, with a line chart |
+| `Constituents` | 100 | Symbol, company, sector, index weight, coverage, 10y return (raw and split-adjusted) |
+| `<SYMBOL>` × 100 | up to 2,477 each | Date, Open, High, Low, Close, Volume, Chg %, Quality |
+| `Corporate Actions` | 76 | Detected split/bonus events with the adjustment ratio |
+
+Filters and frozen header rows are on every data sheet; dates are real Excel dates and
+prices are numeric (not text), so you can chart and pivot directly.
+
+```bash
+python scripts/build_kse100_workbook.py          # rebuild
+python scripts/build_kse100_workbook.py --no-charts
+```

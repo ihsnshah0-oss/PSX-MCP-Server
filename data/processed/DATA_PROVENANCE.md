@@ -107,6 +107,15 @@ Splits/bonus issues appear as single-day cliffs (e.g. `LUCK` ×0.2049 on 2025-04
 before adjusting. Multiply all candles on/before an event date by its `ratio` to build a
 continuity-adjusted series.
 
+## Excel workbook
+
+`KSE100_10Y_OHLCV.xlsx` (11.5 MB, 105 sheets) is a rendering of the JSON + CSV outputs:
+`README`, `Summary`, `Index History` (2495 sessions, 2016-10-10 → 2026-11-03, with a
+10-year line chart), `Constituents` (100 members with raw and split-adjusted 10-year
+returns), one sheet per symbol, and `Corporate Actions` (76 events). Built by
+`scripts/build_kse100_workbook.py`; index levels are trimmed to the same 10-year window
+as the stock candles and come from the two-provider merge described above (±0.5%).
+
 ## Caveats to quote alongside the data
 
 - Not live PSX; mirror data ending 2026-10-08 (stocks) / 2026-11-03 (index).
