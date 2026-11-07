@@ -66,6 +66,47 @@ KSE-100 YTD = **−3.53%** as of 2026-11-03 (167,910.44).
 | `kse100_components_ytd_2026_wide.csv` | 190 | Wide: date × 100 symbols of closes |
 | `kse100_ytd_summary_2026.csv` | 100 | Per-symbol YTD return (split-adjusted), excess vs index, high/low, CA log |
 
+## 10-year OHLCV JSON (`kse100_ohlcv_10y.json`)
+
+Built by `scripts/export_kse100_ohlcv_json.py`, validated by
+`scripts/validate_kse100_ohlcv_json.py`.
+
+| Field | Value |
+|---|---|
+| Window | 2016-10-10 → 2026-10-08 (exactly 10 years back from the last available session) |
+| Symbols | 100 KSE-100 constituents (14 `...XD` ex-div prints mapped to base symbols) |
+| Trading sessions | 2,477 |
+| Candles | 227,829 |
+| Size | 11.1 MB |
+| Layout | `symbols.<SYM>.candles[i] = [date, open, high, low, close, volume, quality]` |
+
+Per symbol the object also carries `name`, `sector`, `idx_weight_pct`, `listed_from`,
+`listed_to`, `rows`, and repair counters.
+
+### Quality flags on each candle (field 7)
+
+| Code | Count | Meaning |
+|---|---|---|
+| `""` | 226,106 | clean |
+| `p` | 989 | a non-positive open/high/low was substituted (close anchored) |
+| `c` | 734 | high/low widened so the candle actually contains open & close |
+| `a` | 0 in output | usable as-is but flagged `is_anomaly` by the source — superseded by `p`/`c` above; 1,658 flagged rows existed, of which 1,723 needed numeric repair |
+
+Rows with `close <= 0` were dropped (0 such rows in this window).
+
+Late listings naturally have fewer candles (TPLRF1 588, HALEON 906, AIRLINK 1,251) —
+`listed_from` records the first real session.
+
+### Prices are NOT adjusted
+
+Splits/bonus issues appear as single-day cliffs (e.g. `LUCK` ×0.2049 on 2025-04-28).
+`scripts/detect_kse100_corporate_actions.py` writes
+`kse100_corporate_actions.json` — 76 candidate events across 45 symbols, detected as
+|return| > max(15%, mean + 7σ). Events with ratio between 0.55 and 1.8 are labelled
+"large move (possible dividend/split or data error)" and should be verified manually
+before adjusting. Multiply all candles on/before an event date by its `ratio` to build a
+continuity-adjusted series.
+
 ## Caveats to quote alongside the data
 
 - Not live PSX; mirror data ending 2026-10-08 (stocks) / 2026-11-03 (index).

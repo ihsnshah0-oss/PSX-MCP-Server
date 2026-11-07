@@ -1,0 +1,786 @@
+{
+  "meta": {
+    "source_json": "kse100_ohlcv_10y.json",
+    "method": "flag |close-to-close return| > max(15%, mean + 7.0*sigma) of that symbol's own daily returns",
+    "price_adjustment_of_source": "none",
+    "how_to_use": "For a continuity-adjusted series, multiply every candle on or before each event date by event['ratio'] (cumulative across events).",
+    "symbols_with_events": 45,
+    "events": 76
+  },
+  "actions": {
+    "AHCL": [
+      {
+        "date": "2025-03-27",
+        "prev_date": "2025-03-21",
+        "prev_close": 109.69,
+        "close": 11.58,
+        "ratio": 0.10557,
+        "implied_action": "~9.47-for-1 split/bonus",
+        "threshold_pct": 19.5
+      }
+    ],
+    "AKBL": [
+      {
+        "date": "2020-03-18",
+        "prev_date": "2020-03-17",
+        "prev_close": 17.15,
+        "close": 14.51,
+        "ratio": 0.846064,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      }
+    ],
+    "APL": [
+      {
+        "date": "2018-09-17",
+        "prev_date": "2018-09-14",
+        "prev_close": 603.92,
+        "close": 469.72,
+        "ratio": 0.777785,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      },
+      {
+        "date": "2022-09-12",
+        "prev_date": "2022-09-09",
+        "prev_close": 390.93,
+        "close": 293.66,
+        "ratio": 0.751183,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      }
+    ],
+    "ATLH": [
+      {
+        "date": "2019-05-30",
+        "prev_date": "2019-05-29",
+        "prev_close": 397.77,
+        "close": 322.0,
+        "ratio": 0.809513,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      }
+    ],
+    "ATRL": [
+      {
+        "date": "2018-09-17",
+        "prev_date": "2018-09-14",
+        "prev_close": 206.77,
+        "close": 162.61,
+        "ratio": 0.786429,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 16.1
+      }
+    ],
+    "BAFL": [
+      {
+        "date": "2026-04-20",
+        "prev_date": "2026-04-17",
+        "prev_close": 125.34,
+        "close": 64.69,
+        "ratio": 0.516116,
+        "implied_action": "~1.94-for-1 split/bonus",
+        "threshold_pct": 15.0
+      }
+    ],
+    "BML": [
+      {
+        "date": "2026-02-02",
+        "prev_date": "2026-01-30",
+        "prev_close": 4.86,
+        "close": 83.91,
+        "ratio": 17.265432,
+        "implied_action": "~1-for-0.06 reverse split",
+        "threshold_pct": 233.2
+      }
+    ],
+    "BOP": [
+      {
+        "date": "2023-07-17",
+        "prev_date": "2023-07-14",
+        "prev_close": 3.62,
+        "close": 4.27,
+        "ratio": 1.179558,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.9
+      }
+    ],
+    "CNERGY": [
+      {
+        "date": "2023-12-15",
+        "prev_date": "2023-12-14",
+        "prev_close": 4.84,
+        "close": 5.75,
+        "ratio": 1.188017,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 18.3
+      },
+      {
+        "date": "2024-12-02",
+        "prev_date": "2024-11-29",
+        "prev_close": 4.72,
+        "close": 5.72,
+        "ratio": 1.211864,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 18.3
+      }
+    ],
+    "COLG": [
+      {
+        "date": "2023-02-10",
+        "prev_date": "2023-02-09",
+        "prev_close": 1999.98,
+        "close": 1464.86,
+        "ratio": 0.732437,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 16.7
+      },
+      {
+        "date": "2023-06-14",
+        "prev_date": "2023-06-13",
+        "prev_close": 1988.54,
+        "close": 1047.34,
+        "ratio": 0.526688,
+        "implied_action": "~1.90-for-1 split/bonus",
+        "threshold_pct": 16.7
+      }
+    ],
+    "FFL": [
+      {
+        "date": "2017-09-20",
+        "prev_date": "2017-09-19",
+        "prev_close": 74.08,
+        "close": 27.32,
+        "ratio": 0.36879,
+        "implied_action": "~2.71-for-1 split/bonus",
+        "threshold_pct": 18.9
+      }
+    ],
+    "FHAM": [
+      {
+        "date": "2024-05-06",
+        "prev_date": "2024-04-24",
+        "prev_close": 7.75,
+        "close": 15.34,
+        "ratio": 1.979355,
+        "implied_action": "~1-for-0.51 reverse split",
+        "threshold_pct": 19.4
+      }
+    ],
+    "GHGL": [
+      {
+        "date": "2017-05-04",
+        "prev_date": "2017-05-03",
+        "prev_close": 159.93,
+        "close": 93.34,
+        "ratio": 0.58363,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      },
+      {
+        "date": "2018-10-25",
+        "prev_date": "2018-10-24",
+        "prev_close": 67.25,
+        "close": 53.92,
+        "ratio": 0.801784,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      },
+      {
+        "date": "2021-01-14",
+        "prev_date": "2021-01-13",
+        "prev_close": 79.92,
+        "close": 59.24,
+        "ratio": 0.741241,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      },
+      {
+        "date": "2021-02-03",
+        "prev_date": "2021-02-02",
+        "prev_close": 60.72,
+        "close": 51.61,
+        "ratio": 0.849967,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      },
+      {
+        "date": "2023-06-16",
+        "prev_date": "2023-06-15",
+        "prev_close": 33.44,
+        "close": 28.19,
+        "ratio": 0.843002,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      }
+    ],
+    "GHNI": [
+      {
+        "date": "2018-10-12",
+        "prev_date": "2018-10-11",
+        "prev_close": 571.66,
+        "close": 270.08,
+        "ratio": 0.472449,
+        "implied_action": "~2.12-for-1 split/bonus",
+        "threshold_pct": 18.7
+      }
+    ],
+    "HUBC": [
+      {
+        "date": "2022-10-11",
+        "prev_date": "2022-10-10",
+        "prev_close": 79.03,
+        "close": 64.18,
+        "ratio": 0.812097,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      }
+    ],
+    "ILP": [
+      {
+        "date": "2023-06-15",
+        "prev_date": "2023-06-14",
+        "prev_close": 54.84,
+        "close": 34.63,
+        "ratio": 0.631473,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      }
+    ],
+    "IMAGE": [
+      {
+        "date": "2021-07-29",
+        "prev_date": "2021-07-28",
+        "prev_close": 34.2,
+        "close": 27.91,
+        "ratio": 0.816082,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 17.9
+      }
+    ],
+    "KAPCO": [
+      {
+        "date": "2023-10-16",
+        "prev_date": "2023-10-13",
+        "prev_close": 27.0,
+        "close": 22.91,
+        "ratio": 0.848519,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      }
+    ],
+    "KEL": [
+      {
+        "date": "2021-09-30",
+        "prev_date": "2021-09-29",
+        "prev_close": 3.31,
+        "close": 4.0,
+        "ratio": 1.208459,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 17.4
+      },
+      {
+        "date": "2025-05-26",
+        "prev_date": "2025-05-23",
+        "prev_close": 4.72,
+        "close": 5.72,
+        "ratio": 1.211864,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 17.4
+      }
+    ],
+    "KOHC": [
+      {
+        "date": "2018-10-16",
+        "prev_date": "2018-10-15",
+        "prev_close": 110.06,
+        "close": 78.62,
+        "ratio": 0.714338,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 18.9
+      },
+      {
+        "date": "2025-08-25",
+        "prev_date": "2025-08-22",
+        "prev_close": 549.99,
+        "close": 108.18,
+        "ratio": 0.196694,
+        "implied_action": "~5.08-for-1 split/bonus",
+        "threshold_pct": 18.9
+      }
+    ],
+    "KTML": [
+      {
+        "date": "2025-09-15",
+        "prev_date": "2025-09-12",
+        "prev_close": 297.39,
+        "close": 57.56,
+        "ratio": 0.193551,
+        "implied_action": "~5.17-for-1 split/bonus",
+        "threshold_pct": 19.9
+      }
+    ],
+    "LCI": [
+      {
+        "date": "2025-07-21",
+        "prev_date": "2025-07-18",
+        "prev_close": 1799.84,
+        "close": 368.98,
+        "ratio": 0.205007,
+        "implied_action": "~4.88-for-1 split/bonus",
+        "threshold_pct": 15.8
+      }
+    ],
+    "LOTCHEM": [
+      {
+        "date": "2026-02-02",
+        "prev_date": "2026-01-30",
+        "prev_close": 30.51,
+        "close": 25.56,
+        "ratio": 0.837758,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      }
+    ],
+    "LUCK": [
+      {
+        "date": "2025-04-28",
+        "prev_date": "2025-04-18",
+        "prev_close": 1751.45,
+        "close": 358.88,
+        "ratio": 0.204905,
+        "implied_action": "~4.88-for-1 split/bonus",
+        "threshold_pct": 16.7
+      }
+    ],
+    "MARI": [
+      {
+        "date": "2024-09-16",
+        "prev_date": "2024-09-13",
+        "prev_close": 3536.83,
+        "close": 415.9,
+        "ratio": 0.117591,
+        "implied_action": "~8.50-for-1 split/bonus",
+        "threshold_pct": 17.4
+      }
+    ],
+    "MTL": [
+      {
+        "date": "2019-10-17",
+        "prev_date": "2019-10-16",
+        "prev_close": 755.41,
+        "close": 625.63,
+        "ratio": 0.828199,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      },
+      {
+        "date": "2021-03-10",
+        "prev_date": "2021-03-09",
+        "prev_close": 1257.2,
+        "close": 1055.79,
+        "ratio": 0.839795,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      },
+      {
+        "date": "2021-10-21",
+        "prev_date": "2021-10-20",
+        "prev_close": 1120.41,
+        "close": 897.16,
+        "ratio": 0.800743,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      },
+      {
+        "date": "2022-03-07",
+        "prev_date": "2022-03-04",
+        "prev_close": 993.31,
+        "close": 764.91,
+        "ratio": 0.770062,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      },
+      {
+        "date": "2022-10-19",
+        "prev_date": "2022-10-18",
+        "prev_close": 841.6,
+        "close": 712.85,
+        "ratio": 0.847018,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      },
+      {
+        "date": "2023-06-22",
+        "prev_date": "2023-06-21",
+        "prev_close": 556.63,
+        "close": 385.25,
+        "ratio": 0.692111,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      },
+      {
+        "date": "2026-06-22",
+        "prev_date": "2026-06-19",
+        "prev_close": 607.26,
+        "close": 312.38,
+        "ratio": 0.514409,
+        "implied_action": "~1.94-for-1 split/bonus",
+        "threshold_pct": 15.0
+      }
+    ],
+    "NATF": [
+      {
+        "date": "2018-10-10",
+        "prev_date": "2018-10-09",
+        "prev_close": 260.0,
+        "close": 219.6,
+        "ratio": 0.844615,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      },
+      {
+        "date": "2019-10-08",
+        "prev_date": "2019-10-07",
+        "prev_close": 193.36,
+        "close": 152.82,
+        "ratio": 0.790339,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      },
+      {
+        "date": "2020-10-09",
+        "prev_date": "2020-10-08",
+        "prev_close": 286.85,
+        "close": 229.55,
+        "ratio": 0.800244,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      },
+      {
+        "date": "2021-10-06",
+        "prev_date": "2021-10-05",
+        "prev_close": 225.92,
+        "close": 179.24,
+        "ratio": 0.793378,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      }
+    ],
+    "NBP": [
+      {
+        "date": "2026-03-17",
+        "prev_date": "2026-03-16",
+        "prev_close": 228.42,
+        "close": 190.0,
+        "ratio": 0.831801,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      }
+    ],
+    "NCPL": [
+      {
+        "date": "2022-08-29",
+        "prev_date": "2022-08-26",
+        "prev_close": 25.59,
+        "close": 15.2,
+        "ratio": 0.593982,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 16.8
+      }
+    ],
+    "NPL": [
+      {
+        "date": "2024-10-15",
+        "prev_date": "2024-10-14",
+        "prev_close": 31.79,
+        "close": 24.11,
+        "ratio": 0.758415,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      }
+    ],
+    "PGLC": [
+      {
+        "date": "2023-06-14",
+        "prev_date": "2023-06-13",
+        "prev_close": 9.55,
+        "close": 4.1,
+        "ratio": 0.429319,
+        "implied_action": "~2.33-for-1 split/bonus",
+        "threshold_pct": 37.1
+      }
+    ],
+    "PIBTL": [
+      {
+        "date": "2022-04-11",
+        "prev_date": "2022-04-08",
+        "prev_close": 6.01,
+        "close": 7.01,
+        "ratio": 1.166389,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 16.4
+      }
+    ],
+    "POL": [
+      {
+        "date": "2018-09-17",
+        "prev_date": "2018-09-14",
+        "prev_close": 659.2,
+        "close": 520.09,
+        "ratio": 0.788971,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      }
+    ],
+    "POWER": [
+      {
+        "date": "2020-04-02",
+        "prev_date": "2020-04-01",
+        "prev_close": 5.29,
+        "close": 6.22,
+        "ratio": 1.175803,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 16.5
+      },
+      {
+        "date": "2020-04-17",
+        "prev_date": "2020-04-16",
+        "prev_close": 5.9,
+        "close": 6.9,
+        "ratio": 1.169492,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 16.5
+      },
+      {
+        "date": "2024-08-21",
+        "prev_date": "2024-08-20",
+        "prev_close": 4.95,
+        "close": 5.79,
+        "ratio": 1.169697,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 16.5
+      }
+    ],
+    "PPL": [
+      {
+        "date": "2018-10-12",
+        "prev_date": "2018-10-11",
+        "prev_close": 210.01,
+        "close": 177.5,
+        "ratio": 0.845198,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      },
+      {
+        "date": "2019-10-16",
+        "prev_date": "2019-10-15",
+        "prev_close": 136.26,
+        "close": 114.61,
+        "ratio": 0.841113,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      }
+    ],
+    "PSO": [
+      {
+        "date": "2017-10-11",
+        "prev_date": "2017-10-10",
+        "prev_close": 433.71,
+        "close": 351.27,
+        "ratio": 0.809919,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      },
+      {
+        "date": "2018-10-05",
+        "prev_date": "2018-10-04",
+        "prev_close": 309.6,
+        "close": 244.06,
+        "ratio": 0.788307,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      },
+      {
+        "date": "2019-10-16",
+        "prev_date": "2019-10-15",
+        "prev_close": 174.87,
+        "close": 145.8,
+        "ratio": 0.833762,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      }
+    ],
+    "SAZEW": [
+      {
+        "date": "2020-02-26",
+        "prev_date": "2020-02-25",
+        "prev_close": 250.33,
+        "close": 168.14,
+        "ratio": 0.671673,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 17.6
+      },
+      {
+        "date": "2021-10-18",
+        "prev_date": "2021-10-15",
+        "prev_close": 151.49,
+        "close": 123.93,
+        "ratio": 0.818074,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 17.6
+      }
+    ],
+    "SCBPL": [
+      {
+        "date": "2023-09-06",
+        "prev_date": "2023-09-05",
+        "prev_close": 28.12,
+        "close": 23.59,
+        "ratio": 0.838905,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      }
+    ],
+    "SEARL": [
+      {
+        "date": "2021-10-29",
+        "prev_date": "2021-10-28",
+        "prev_close": 232.91,
+        "close": 178.57,
+        "ratio": 0.766691,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.1
+      },
+      {
+        "date": "2022-10-20",
+        "prev_date": "2022-10-19",
+        "prev_close": 103.98,
+        "close": 83.5,
+        "ratio": 0.803039,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.1
+      }
+    ],
+    "SRVI": [
+      {
+        "date": "2019-04-19",
+        "prev_date": "2019-04-18",
+        "prev_close": 745.71,
+        "close": 580.63,
+        "ratio": 0.778627,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 21.1
+      },
+      {
+        "date": "2021-04-20",
+        "prev_date": "2021-04-19",
+        "prev_close": 1188.7,
+        "close": 610.89,
+        "ratio": 0.513914,
+        "implied_action": "~1.95-for-1 split/bonus",
+        "threshold_pct": 21.1
+      },
+      {
+        "date": "2026-08-24",
+        "prev_date": "2026-08-21",
+        "prev_close": 2249.33,
+        "close": 215.19,
+        "ratio": 0.095668,
+        "implied_action": "~10.45-for-1 split/bonus",
+        "threshold_pct": 21.1
+      }
+    ],
+    "SYS": [
+      {
+        "date": "2022-03-31",
+        "prev_date": "2022-03-30",
+        "prev_close": 717.72,
+        "close": 378.87,
+        "ratio": 0.52788,
+        "implied_action": "~1.89-for-1 split/bonus",
+        "threshold_pct": 18.9
+      },
+      {
+        "date": "2025-06-02",
+        "prev_date": "2025-05-27",
+        "prev_close": 544.1,
+        "close": 103.4,
+        "ratio": 0.190039,
+        "implied_action": "~5.26-for-1 split/bonus",
+        "threshold_pct": 18.9
+      }
+    ],
+    "TGL": [
+      {
+        "date": "2020-03-20",
+        "prev_date": "2020-03-19",
+        "prev_close": 73.98,
+        "close": 52.98,
+        "ratio": 0.716139,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      },
+      {
+        "date": "2021-03-24",
+        "prev_date": "2021-03-22",
+        "prev_close": 108.63,
+        "close": 89.05,
+        "ratio": 0.819755,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      },
+      {
+        "date": "2022-10-19",
+        "prev_date": "2022-10-18",
+        "prev_close": 114.75,
+        "close": 91.69,
+        "ratio": 0.799041,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 15.0
+      }
+    ],
+    "THCCL": [
+      {
+        "date": "2025-07-14",
+        "prev_date": "2025-07-11",
+        "prev_close": 195.37,
+        "close": 39.98,
+        "ratio": 0.204637,
+        "implied_action": "~4.89-for-1 split/bonus",
+        "threshold_pct": 21.5
+      }
+    ],
+    "UBL": [
+      {
+        "date": "2025-06-23",
+        "prev_date": "2025-06-20",
+        "prev_close": 524.19,
+        "close": 261.81,
+        "ratio": 0.499456,
+        "implied_action": "~2.00-for-1 split/bonus",
+        "threshold_pct": 15.0
+      }
+    ],
+    "YOUW": [
+      {
+        "date": "2020-10-16",
+        "prev_date": "2020-10-15",
+        "prev_close": 3.26,
+        "close": 4.16,
+        "ratio": 1.276074,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 26.7
+      },
+      {
+        "date": "2024-08-05",
+        "prev_date": "2024-08-02",
+        "prev_close": 3.14,
+        "close": 4.14,
+        "ratio": 1.318471,
+        "implied_action": "large move (possible dividend/split or data error)",
+        "threshold_pct": 26.7
+      }
+    ]
+  }
+}
