@@ -152,3 +152,8 @@ tmp/
 # MCP Configuration files (keep templates, ignore actual configs)
 gemini_config.json
 mcp_config.json
+
+# Downloaded PSX data mirrors (large, not tracked)
+data/raw/
+
+data/processed/*.csv
